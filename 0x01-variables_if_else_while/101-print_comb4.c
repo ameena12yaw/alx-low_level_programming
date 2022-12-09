@@ -32,6 +32,6 @@ int main(void)
 			}
 		}
 	}
-	putcar('\n');
+	putchar('\n');
 	return (0);
 }
