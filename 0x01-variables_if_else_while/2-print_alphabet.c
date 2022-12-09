@@ -1,17 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - prints alpha in lower case
- * Return: Always0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char lc;
+	int cd = 'a';
 
-	for (ls = 'a'; lc <= 'z'; lc++)
+	while (cd <= 'z')
 	{
-		putchar(lc);
+		putchar(cd);
+		cd++;
 	}
 	putchar('\n');
 	return (0);
