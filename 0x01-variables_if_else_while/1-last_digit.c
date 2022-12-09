@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include < stdlib.h>
 #include <time.h>
 
 /**
- * main - Entry point
+ * main - Enty point
  * Return: Always 0 (Success)
  */
 
@@ -18,15 +18,15 @@ int main(void)
 
 	if (a > 5)
 	{
-		printf("Last digit of %d is %d and it is greater than 5\n", n, a);
+		printf("Last digit of %d is %d and is greater than 5\n", n, a);
 	}
-	 if (a == 0)
+	else if (a == 0)
 	{
-		printf("Last digit of %d is %d and it is 0\n", n, a);
+		printf("Last digit of %d is %d and is 0\n", n, a);
 	}
-	if (a < 6 && a != 0)
+	else
 	{
-		printf("Last digit of %d is %d and it is less than 6 and not 0\n", n, a);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, a);
 	}
 	return (0);
 }
