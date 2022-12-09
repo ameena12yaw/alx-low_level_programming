@@ -10,9 +10,9 @@ int main(void)
 	int first_digit = '0';
 	int second_digit = '0';
 
-	for (second_digit = '0'; second_digit <= '9'; secon_digit++)
+	for (second_digit = '0'; second_digit <= '9'; second_digit++)
 	{
-		for (first_digit = '0'; first_digit = '9'; first_digit++)
+		for (first_digit = '0'; first_digit <= '9'; first_digit++)
 		{
 			if (!((first_digit == second_digit) || (second_digit > first_digit)))
 			{
