@@ -18,7 +18,7 @@ int main(void)
 	{
 		if (b < 4000000 && (b % 2) == 0)
 		{
-			e = e + c;
+			e = e + b;
 		}
 		d = b + c;
 		b = c;
