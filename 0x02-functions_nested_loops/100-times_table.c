@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_times_table - prints time tables for n
+ * print_times_table - prints time tables
  * @n: times table to be printed
- * Return: times tabe for n
+ * Return: void
  */
 void print_times_table(int n)
 {
@@ -32,7 +32,7 @@ void print_times_table(int n)
 			else
 			{
 				_putchar('0' + rep / 100);
-				_putchar('0' + (rep - -100) / 10);
+				_putchar('0' + (rep - 100) / 10);
 				_putchar('0' + rep % 10);
 			}
 			if (b < n)
