@@ -22,7 +22,7 @@ int main(void)
 		{
 			printf(" Fizz");
 		}
-		else if (nnum % 5 == 0)
+		else if (num % 5 == 0)
 		{
 			printf(" Buzz");
 		}
@@ -31,7 +31,7 @@ int main(void)
 			printf(" %d", num);
 		}
 	}
-	printf("\n");
+	printf('\n');
 
 	return (0);
 }
