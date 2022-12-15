@@ -11,10 +11,13 @@ int main(void)
 	long int a, num;
 
 	a = 612852475143;
-	for (a % num == 0)
+	for (num = 2; num <= a; num++)
 	{
-		n /= num;
-		num--;
+		if (a % num == 0)
+		{
+			n /= num;
+			num--;
+		}
 	}
 	printf("%ld\n", num);
 	return (0);
