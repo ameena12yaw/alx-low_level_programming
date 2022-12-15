@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints FizzBuzz for mutiples of 3 and 5
- * prints Fizz for £ and Buzz for 5
+ * main - prints FizzBuzz for mutiples of 3 and 5.
  * Return: Always 0 (Success)
  */
 
@@ -31,7 +30,7 @@ int main(void)
 			printf(" %d", num);
 		}
 	}
-	printf('\n');
+	printf("\n");
 
 	return (0);
 }
