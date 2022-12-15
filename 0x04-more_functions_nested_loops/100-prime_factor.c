@@ -8,17 +8,21 @@
 
 int main(void)
 {
-	long int a, num;
+	long prime = 612852475143, div;
 
-	a = 612852475143;
-	for (num = 2; num <= a; num++)
+	while (div < (prime / 2))
 	{
-		if (a % num == 0)
+		if ((prime % 2) == 0)
 		{
-			n /= num;
-			num--;
+			prime /= 2;
+			continue;
+		}
+		for (div = 3; div < (prime / 2); div += 2)
+		{
+			if ((prime % div) == 0)
+				prime /= div;
 		}
 	}
-	printf("%ld\n", num);
+	printf("%ld\n", prime);
 	return (0);
 }
