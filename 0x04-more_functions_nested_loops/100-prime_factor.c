@@ -8,17 +8,14 @@
 
 int main(void)
 {
-	long int b, pf;
+	long int a, num;
 
-	b = 612852475143;
-	for (pf = 2; pf <= n; pf++)
+	a = 612852475143;
+	for (a % num == 0)
 	{
-		if (b % pf == 0)
-		{
-			b /= pf;
-			pf--;
-		}
+		n /= num;
+		num--;
 	}
-	printf("%ld\n", pf);
+	printf("%ld\n", num);
 	return (0);
 }
