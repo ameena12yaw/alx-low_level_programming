@@ -9,42 +9,37 @@
 
 int evaluate_num(int num, int iterator)
 {
-	if (iterator == num - 1)
+	if (iterator < num)
+	{
+		if (num % iterator == 0)
+		{
+			return (0);
+		}
+		else
+		{
+			return (evaluate_num(num, iterator + 1));
+		}
+	}
+	else
 	{
 		return (1);
 	}
-	else if (num % iterator == 0)
-	{
-		return (0);
-	}
-
-	if (num % iterator != 0)
-	{
-		return (evatuate_num(num, iterator + 1));
-	}
-
-	return (0);
 }
 
 /**
- * is_prime_number - evaluates prime or not
- * @num: number
- * Return: 1 if prime and 0 if otherwise
+ * is_prime_number - checks if a number is prime or not.
+ * @n: number to be ckecked
+ * Return: 1 if number is prime and 0 if otherwise
  */
 
-int is_prime_number(int num)
+int is_ptime_number(int n)
 {
-	int iterator;
-
-	iterator = 2;
-
-	if (num < 2)
+	if (n <= 1)
 	{
 		return (0);
 	}
-	if (num == 2)
+	else
 	{
-		return (1);
+		return (evaluate_num(n, 2));
 	}
-	return (evaluate_num(num, iterator));
 }
