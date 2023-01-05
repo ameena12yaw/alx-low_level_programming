@@ -32,7 +32,7 @@ int evaluate_num(int num, int iterator)
  * Return: 1 if number is prime and 0 if otherwise
  */
 
-int is_ptime_number(int n)
+int is_prime_number(int n)
 {
 	if (n <= 1)
 	{
