@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len_1, len_2, size a, b;
+	unsigned int len_1, len_2, size, a, b;
 	char *nstr;
 
 	if (s1 == NULL)
@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 
 	size = len_1 + len_2;
 
-	nstr = malloc((sizeov(char) * size) + 1);
+	nstr = malloc((sizeof(char) * size) + 1);
 
 	if (nstr == NULL)
 		return (NULL);
