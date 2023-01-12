@@ -2,24 +2,24 @@
 
 /**
  * _calloc - allocated memoty for size bytes
- * @number: number of elements in the array
+ * @nmedb: number of elements in the array
  * @size: bytes for each array
  * Return: pointer void
  */
 
-void *_calloc(unsigned int number, unsigned int size)
+void *_calloc(unsigned int nmedb, unsigned int size)
 {
 	char *p;
 	unsigned int i;
 
-	if (number == 0 || size == 0)
+	if (nmedb == 0 || size == 0)
 		return (NULL);
 
-	p = malloc(number * size);
+	p = malloc(nmedb * size);
 	if (p == NULL)
 		return (NULL);
 
-	for (i = 0, i < number * size; i++)
+	for (i = 0, i < nmedb * size; i++)
 		p[i] = 0;
 
 	return (p);
