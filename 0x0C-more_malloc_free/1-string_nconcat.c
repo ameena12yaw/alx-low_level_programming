@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdlib.h>
 
 /**
  * _strlen - calculate and return string length
  * @string: string
- * Return: Always 0 (SUccess)
+ * Return: Always 0 (Success)
  */
 
 int _strlen(char *string)
@@ -48,7 +49,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (a = 0; s1[a] != '\0'; a++)
 		ptr[a] = s1[a];
-	for (a = 0; a < num; a++)
+	for (b = 0; b < num; b++)
 		ptr[a + b] = s2[b];
 	prt[a + b] = '\0';
 
