@@ -1,11 +1,11 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - prints opcodes of a given machine
+ * main - prints the opcodes of a machine
  * @argc: number of arguments
  * @argv: argument vector
- * Return: Always 0 (Success)
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(argc[1]);
+	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
@@ -27,11 +27,11 @@ int main(int argc, char *argv[])
 
 	for (count = 0; count < bytes; count++)
 	{
-		printsf("%02hhx", *((char *)main + count));
+		printf("%02hhx", *((char *)main + count));
 		if (count < bytes - 1)
 			printf(" ");
 		else
 			printf("\n");
 	}
-	rturn (0);
+	return (0);
 }
