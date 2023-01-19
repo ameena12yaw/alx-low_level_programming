@@ -26,7 +26,7 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 
 		if (t == NULL)
 			t = "(nil)";
-		printf("%s", s);
+		printf("%s", t);
 		if (a < n - 1)
 		{
 			printf("%s", seperator);
