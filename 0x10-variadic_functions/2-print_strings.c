@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void print_strings(const char *seperator, const unsigned int n, ..)
+void print_strings(const char *seperator, const unsigned int n, ...)
 {
 	unsigned int a;
 	char *t;
