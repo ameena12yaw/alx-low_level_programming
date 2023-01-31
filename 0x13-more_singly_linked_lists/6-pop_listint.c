@@ -9,16 +9,16 @@ i#include "lists.h"
 int pop_listint(listint_t **head)
 {
 	listint_t *tmp;
-	int new;
+	int ret;
 
 	if (*head == NULL)
 		return (0);
 
 	tmp = *head;
-	new = (*head)->n;
+	ret = (*head)->n;
 	*head = (*head)->next;
 
 	free(tmp);
 
-	return (new);
+	return (ret);
 }
