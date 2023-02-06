@@ -4,26 +4,42 @@
  * create_file - creates a file
  * @filename: name of file to be created
  * @text_content: content of the text
- * Return: if function fails - -1, otherwise - 1
+ * Return: 1 on success, -1 on failure
  */
 
 int create_file(const char *filename, char *text_content)
 {
-	int led;
+	int fd;
 
 	if (!filename)
 		return (-1);
 
-	led = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
-	if (led == -1)
+	if (fd == -1)
 		return (-1);
 
 	if (text_content)
-		write(led, text_content, _strlen(text_content));
+		write(fd, text_content, _strlen(text_content));
 
 
-	close(led);
+	close(fd);
 	return (1);
+}
+
+/**
+ * _strlen - length of string
+ * @s: string to count
+ * Return: string length
+ */
+
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c])
+		c++;
+
+	return (c);
 }
 
