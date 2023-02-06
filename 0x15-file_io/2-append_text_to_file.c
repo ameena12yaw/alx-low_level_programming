@@ -4,32 +4,45 @@
  * append_text_to_file - appends text at the end of a file
  * @filename: name of the file
  * @text_content:  the string to add to the end of the file
- * Return: if the function fails or file name is NULL - -1
- *         if the file does not exist or user lacks write permissions - -1
- *         otherwise - 1
+ * Return: 1 on success, -1 on failure
  */
 
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int a, b, length = 0;
+	int led;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	if (text_content != NULL)
+	led = open(filename, O_WRONLY | O_APPEND);
+
+	if (led == -1)
+		return (-1);
+
+	if (text_content)
 	{
-		for (length = 0; text_content[length];)
-			length++;
+		if (write(led, text_content, _strlen(text_content)) == -1)
+			return (-1);
 	}
 
-	a = open(filename, O_WRONGLY | O_APPEND);
-	b = write(a, text_content, length);
-
-	if (a == -1 || b == -1)
-		return (-1);
-
-	close(a);
+	close(led);
 
 	return (1);
+}
+
+/**
+ * _strlen - the length of a string to return
+ * @s: the string to count
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c])
+		c++;
+
+	return (c);
 }
