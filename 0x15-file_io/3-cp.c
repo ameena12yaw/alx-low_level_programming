@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 {
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to \n");
 		exit(97);
 	}
 
@@ -37,7 +37,7 @@ void copy_file(const char *src, const char *dest)
 
 	if (!src || ofd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 
@@ -47,73 +47,26 @@ void copy_file(const char *src, const char *dest)
 	{
 		if (write(tfd, buff, readed) != readed || tfd == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to%s\n", dest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			exit(99);
 		}
 	}
 
 	if (readed == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file%s\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
 
-	if (close(ofd) == 1)
+	if (close(ofd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", ofd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofd);
 		exit(100);
 	}
 
 	if (close(tfd) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd%d\n", tfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", tfd);
 		exit(100);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
